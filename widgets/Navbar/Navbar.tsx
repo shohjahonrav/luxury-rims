@@ -14,7 +14,7 @@ const Navbar = () => {
               <Link href="/rims">Rims</Link>
             </li>
             <li className="text-navbar-text-primary text-[16px]">
-              <Link href="">Rental Terms</Link>
+              <Link href="/#service">Service</Link>
             </li>
             <li className="text-navbar-text-primary text-[16px]">
               <Link href="/news">News</Link>
