@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
-import { IoDiamondOutline } from "react-icons/io5"; // Ionicons version
+import { IoDiamondOutline } from "react-icons/io5"; 
 
 const Hero = () => {
   return (

@@ -1,11 +1,12 @@
 import { Button } from "@/components/ui/button";
-import { ChevronLeft, ChevronRight } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 import Benefits from "../landing/components/Benefits";
 import Steps from "../landing/components/4Steps";
 import FAQ from "../landing/components/FAQ";
+import { RimCard } from "@/features/Rims/components/RimCard";
+import { RimsData } from "@/data/rims/RimsData";
 
 const RimsDetails = () => {
   return (
@@ -38,7 +39,7 @@ const RimsDetails = () => {
             </div>
           </div>
           <Image
-            src="/images/car1.avif"
+            src="/rims/rim6.avif"
             width={920}
             height={600}
             className="object-cover h-150 rounded-[30px]"
@@ -111,46 +112,15 @@ const RimsDetails = () => {
               </span>
             </Button>
           </div>
-          <div className="grid grid-cols-2 gap-3.75">
-            {Array.from({ length: 4 }).map((_, i) => (
-              <div key={i} className="flex flex-col">
-                <Link
-                  className="relative overflow-hidden h-149.25 rounded-[30px]"
-                  href=""
-                >
-                  <Image
-                    alt="Car"
-                    src="/images/car1.avif"
-                    height={597}
-                    placeholder="blur"
-                    blurDataURL="/images/car1.avif"
-                    width={902}
-                    className="object-cover hover:scale-105 duration-500 h-149.25 rounded-[30px]"
-                  />
-                  <div className="absolute top-2.5 flex items-center gap-4 left-2.5 w-full">
-                    <div className="h-9.25 px-3 rounded-[99px] bg-navbar-text-dark flex items-center justify-center w-fit text-[12px] text-white">
-                      195/65
-                    </div>
-                    <div className="h-9.25 px-3 rounded-[99px] bg-navbar-text-dark flex items-center justify-center w-fit text-[12px] text-white">
-                      R15
-                    </div>
-                  </div>
-                </Link>
-                <div className="px-2.5 pt-6.25 flex flex-col gap-1.5">
-                  <div className="flex justify-between">
-                    <span className="text-white text-[18px] font-medium">
-                      BBS Tires
-                    </span>
-                    <Link href="" className="flex items-center gap-1">
-                      <span className="text-learn-more text-[16px]">
-                        Learn More
-                      </span>
-                      <ChevronRight className="text-learn-more w-5! h-5!" />
-                    </Link>
-                  </div>
-                  <span className="text-learn-more">price: $1,100</span>
-                </div>
-              </div>
+          <div className="grid grid-cols-2 gap-x-3.75 gap-y-5">
+            {RimsData.slice(0, 4).map((link, i) => (
+              <RimCard
+                imgWidth={902}
+                imgHeight={597}
+                imgSrc={link}
+                key={i}
+                imgSizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 45vw"
+              />
             ))}
           </div>
         </div>
