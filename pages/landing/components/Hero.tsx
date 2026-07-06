@@ -6,7 +6,7 @@ const Hero = () => {
   return (
     <div className="relative h-screen">
       <Image
-        src="/hero/hero.avif"
+        src="/hero/hero1.avif"
         fill
         sizes="100vw"
         priority
