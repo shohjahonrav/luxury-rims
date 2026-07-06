@@ -82,14 +82,14 @@ export function TestimonialCarousel() {
             {testimonials.map((testimonial, index) => (
               <CarouselItem key={index} className="pl-4 md:basis-1/3">
                 <Card className="bg-[#0D0D0D] border-neutral-900 h-full">
-                  <CardContent className="flex flex-col justify-between p-8 h-full min-h-62.5">
+                  <CardContent className="flex flex-col justify-between p-6 h-full min-h-62.5">
                     <div>
                       <div className="flex gap-1 mb-4 text-white">
                         {Array.from({ length: 5 }).map((_, i) => (
                           <Star key={i} className="h-4 w-4 fill-current stroke-none" />
                         ))}
                       </div>
-                      <p className="text-neutral-400 text-sm leading-relaxed mb-6 font-light">
+                      <p className="text-neutral-400 text-[16px] leading-relaxed mb-6 font-light">
                         {testimonial.content}
                       </p>
                     </div>
