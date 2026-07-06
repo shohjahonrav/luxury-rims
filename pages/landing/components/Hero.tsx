@@ -1,5 +1,5 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
+import Link from "next/link";
 import { IoDiamondOutline } from "react-icons/io5"; 
 
 const Hero = () => {
@@ -27,14 +27,14 @@ const Hero = () => {
               Premium Car Rims in Uzbekistan
             </span>
             <p className="text-[18px] text-navbar-text-primary">Experience unmatched comfort, style, and service — wherever the road takes you.</p>
-            <Button className="bg-white w-fit h-12.25 rounded-[99px] px-5 relative text-[14px] group overflow-hidden hover:bg-white cursor-pointer text-navbar-text-dark">
+            <Link href="/rims" className="bg-white flex items-center justify-center font-medium w-fit h-12.25 rounded-[99px] px-5 relative text-[14px] group overflow-hidden hover:bg-white cursor-pointer text-navbar-text-dark">
             <span className="group-hover:-translate-y-12.5 duration-300">
               Choose Your Rims
             </span>
             <span className="-translate-y-1/2 absolute top-[calc(50%+50px)] group-hover:top-1/2 duration-300">
               Choose Your Rims
             </span>
-          </Button>
+          </Link>
           </div>
         </div>
       </div>
