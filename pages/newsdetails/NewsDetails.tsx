@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { NewsData } from "@/data/news/NewsData";
 import { NewsCard } from "@/features/news/components/NewsCard";
 import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
@@ -52,7 +53,10 @@ const NewsDetails = () => {
               <span className="text-[54px] text-white font-medium">
                 Recomended For You
               </span>
-              <Link href="/news" className="bg-navbar-text-dark h-12.25 w-fit mt-5 rounded-[99px] flex items-center justify-center font-medium px-5 relative text-[14px] group overflow-hidden hover:bg-navbar-text-dark cursor-pointer text-white">
+              <Link
+                href="/news"
+                className="bg-navbar-text-dark h-12.25 w-fit mt-5 rounded-[99px] flex items-center justify-center font-medium px-5 relative text-[14px] group overflow-hidden hover:bg-navbar-text-dark cursor-pointer text-white"
+              >
                 <span className="group-hover:-translate-y-12.5 duration-300">
                   Browse News
                 </span>
@@ -62,8 +66,8 @@ const NewsDetails = () => {
               </Link>
             </div>
             <div className="mt-20 grid grid-cols-3 gap-3.75">
-              {Array.from({ length: 3 }).map((_, i) => (
-                <NewsCard key={i} />
+              {NewsData.slice(0, 3).map((link, i) => (
+                <NewsCard key={i} imgSrc={link} />
               ))}
             </div>
           </div>

@@ -27,10 +27,10 @@ const NotFound = () => {
           </p>
            <Link href="/" className="bg-white h-12.25 flex items-center justify-center mt-5 font-medium rounded-[99px] px-5 relative text-[14px] group overflow-hidden hover:bg-white cursor-pointer text-navbar-text-dark">
             <span className="group-hover:-translate-y-12.5 duration-300">
-              Buy Now
+              Back to Home
             </span>
             <span className="-translate-y-1/2 absolute top-[calc(50%+50px)] group-hover:top-1/2 duration-300">
-              Buy Now
+              Back to Home
             </span>
           </Link>
         </div>

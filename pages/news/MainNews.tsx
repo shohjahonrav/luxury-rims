@@ -1,22 +1,5 @@
-import {
-  Select,
-  SelectContent,
-  SelectItem,
-  SelectTrigger,
-  SelectValue,
-} from "@/components/ui/select";
-import {
-  Pagination,
-  PaginationContent,
-  PaginationEllipsis,
-  PaginationItem,
-  PaginationLink,
-} from "@/components/ui/pagination";
-
-import { ChevronRight } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 import { Button } from "@/components/ui/button";
+import { NewsData } from "@/data/news/NewsData";
 import { NewsCard } from "@/features/news/components/NewsCard";
 
 const MainNews = () => {
@@ -27,8 +10,8 @@ const MainNews = () => {
           <span className="text-white text-[68px] font-medium">News</span>
         </div>
         <div className="grid grid-cols-3 gap-3.75 mt-20">
-          {Array.from({ length: 6 }).map((_, i) => (
-            <NewsCard key={i} />
+          {NewsData.map((link, i) => (
+            <NewsCard key={i} imgSrc={link} />
           ))}
         </div>
         <div className="mt-7 flex justify-center">

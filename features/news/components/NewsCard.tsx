@@ -1,17 +1,16 @@
-import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
 
-export const NewsCard = () => {
+export const NewsCard = ({ imgSrc }: { imgSrc: string }) => {
   return (
     <div className="relative overflow-hidden rounded-[30px]">
       <Image
-        src="/images/news1.avif"
+        src={imgSrc}
         width={596}
         height={656}
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 40vw"
         alt="News1"
-        className="object-cover hover:scale-1.2 duration-400 h-164 rounded-[30px]"
+        className="object-cover h-164 rounded-[30px]"
       />
       <div className="absolute top-0 left-0 h-full flex flex-col justify-between p-5 w-full bg-linear-to-t from-black via-transparent to-transparent">
         <span className="text-white font-medium">August 1, 2025</span>

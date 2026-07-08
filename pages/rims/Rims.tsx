@@ -11,14 +11,8 @@ import {
   PaginationEllipsis,
   PaginationItem,
   PaginationLink,
-  PaginationNext,
-  PaginationPrevious,
 } from "@/components/ui/pagination";
 
-import { ChevronRight } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
 import { RimCard } from "@/features/Rims/components/RimCard";
 import { RimsData } from "@/data/rims/RimsData";
 
@@ -107,7 +101,13 @@ const Rims = () => {
         </div>
         <div className="grid grid-cols-3 gap-x-3.75 gap-y-5 mt-20">
           {RimsData.map((link, i) => (
-            <RimCard imgHeight={697} imgWidth={600} imgSrc={link} key={i} imgSizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 45vw" />
+            <RimCard
+              imgHeight={697}
+              imgWidth={600}
+              imgSrc={link}
+              key={i}
+              imgSizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 45vw"
+            />
           ))}
         </div>
         <div className="mt-7">
@@ -119,7 +119,11 @@ const Rims = () => {
                 </PaginationLink>
               </PaginationItem>
               <PaginationItem className="h-10.5 w-10.5 rounded-[12px] bg-white  text-white flex items-center justify-center">
-                <PaginationLink className="text-[18px] border-none text-navbar-text-dark" href="#" isActive>
+                <PaginationLink
+                  className="text-[18px] border-none text-navbar-text-dark"
+                  href="#"
+                  isActive
+                >
                   2
                 </PaginationLink>
               </PaginationItem>
