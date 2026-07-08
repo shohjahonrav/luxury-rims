@@ -1,19 +1,16 @@
-"use"
 import type { Metadata } from "next";
 import "./globals.css";
-import { Inter, Geist } from 'next/font/google';
-import './globals.css';
+import { Inter, Geist } from "next/font/google";
 import { cn } from "@/lib/utils";
 import SmoothScroll from "@/components/smootscrolling/SmoothScrolling";
+import Navbar from "@/widgets/Navbar/Navbar";
+import PageTransition from "@/components/pagetransition/PageTransition";
 
-const geist = Geist({subsets:['latin'],variable:'--font-sans'});
-
-
-// Configure the Inter font
+const geist = Geist({ subsets: ["latin"], variable: "--font-sans" });
 const inter = Inter({
-  subsets: ['latin'],
-  display: 'swap', 
-  variable: '--font-inter', // Defines a CSS v  ariable
+  subsets: ["latin"],
+  display: "swap",
+  variable: "--font-inter",
 });
 
 export const metadata: Metadata = {
@@ -29,11 +26,18 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={cn("h-full", "antialiased", inter.variable, inter.variable, "font-sans", geist.variable)}
+      className={cn(
+        "h-full",
+        "antialiased",
+        inter.variable,
+        "font-sans",
+        geist.variable,
+      )}
     >
       <body className="min-h-full flex flex-col">
         <SmoothScroll />
-        {children}
+        <Navbar />
+        <PageTransition>{children}</PageTransition>
       </body>
     </html>
   );

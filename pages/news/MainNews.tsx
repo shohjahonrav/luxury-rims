@@ -1,8 +1,12 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import { NewsData } from "@/data/news/NewsData";
 import { NewsCard } from "@/features/news/components/NewsCard";
+import { useState } from "react";
 
 const MainNews = () => {
+  const [showedImage, setShowedImage] = useState<number>(6)
+  console.log(showedImage)
   return (
     <div className="px-10 pb-18.75 pt-37.5 flex justify-center">
       <div className="max-w-[1830px]">
@@ -10,12 +14,12 @@ const MainNews = () => {
           <span className="text-white text-[68px] font-medium">News</span>
         </div>
         <div className="grid grid-cols-3 gap-3.75 mt-20">
-          {NewsData.map((link, i) => (
+          {NewsData.slice(0, showedImage).map((link, i) => (
             <NewsCard key={i} imgSrc={link} />
           ))}
         </div>
         <div className="mt-7 flex justify-center">
-          <Button className="bg-navbar-text-dark w-fit h-12.25 rounded-[99px] px-5 relative text-[14px] group overflow-hidden hover:bg-navbar-text-dark cursor-pointer text-white">
+          <Button onClick={() => setShowedImage(showedImage + 6)} className="bg-navbar-text-dark w-fit h-12.25 rounded-[99px] px-5 relative text-[14px] group overflow-hidden hover:bg-navbar-text-dark cursor-pointer text-white">
             <span className="group-hover:-translate-y-12.5 duration-300">
               Shore More News
             </span>

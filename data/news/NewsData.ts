@@ -5,4 +5,6 @@ export const NewsData = [
   "/news/news4.avif",
   "/news/news5.avif",
   "/news/news6.avif",
+  "/news/news7.avif",
+  "/news/news8.avif",
 ]

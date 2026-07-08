@@ -7,7 +7,9 @@ const Navbar = () => {
   return (
     <div className="h-21 w-full bg-linear-to-b flex items-center justify-center px-10 from-black-primary  via-transparent to-transparent fixed top-0 left-0 z-10">
       <div className="max-w-[1830px] relative w-full flex items-center justify-between">
-        <Link href="/" className="text-white">Luxury Rims</Link>
+        <Link href="/" className="text-white">
+          Luxury Rims
+        </Link>
         <div className="lg:absolute lg:top-1/2 lg:left-1/2 lg:-translate-x-1/2 lg:-translate-y-1/2">
           <ul className="flex gap-12.5">
             <li className="text-navbar-text-primary text-[16px]">
