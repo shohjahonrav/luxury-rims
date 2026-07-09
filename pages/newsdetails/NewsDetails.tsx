@@ -1,20 +1,26 @@
+"use client"
 import { Button } from "@/components/ui/button";
 import { NewsData } from "@/data/news/NewsData";
 import { NewsCard } from "@/features/news/components/NewsCard";
 import { ChevronLeft } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
+import { useRouter } from "next/navigation";
 
 const NewsDetails = () => {
+  const navigate = useRouter()
+  const goBack = () => {
+    navigate.back()
+  }
   return (
-    <div className="max-10 pt-37.5 pb-18.75 flex justify-center">
-      <div className="max-w-[1830px] w-full flex flex-col gap-37.5">
+    <div className="max-10 px-5 pt-25 lg:pt-37.5 pb-12.5 lg:pb-18.75 flex justify-center">
+      <div className="max-w-[1830px] w-full flex flex-col gap-25 lg:gap-37.5">
         <div className="max-w-162.5 mx-auto w-full flex flex-col gap-3.75">
-          <Link href="" className="flex gap-1.25 text-gray-primary">
+          <Button onClick={() => goBack()} className="flex gap-1.25 bg-transparent w-fit px-0 hover:bg-transparent text-gray-primary">
             <ChevronLeft />
             <span>Back to Rims</span>
-          </Link>
-          <span className="text-[68px] text-white font-medium leading-[78.2px]">
+          </Button>
+          <span className="text-[46px] md:text-[64px] lg:text-[68px] text-white font-medium leading-[52.9px] md:leading-none lg:leading-[78.2px]">
             Express 90-minute priority delivery service launched
           </span>
           <span className="text-[16px] text-gray-primary">July 20, 2025</span>
@@ -23,7 +29,7 @@ const NewsDetails = () => {
             width={650}
             height={400}
             alt="News 1"
-            className="h-100 object-cover rounded-[30px]"
+            className=" object-cover aspect-650/400 rounded-[30px]"
           />
           <div className="flex flex-col gap-3.75 mt-6.25">
             <p className="text-[18px] text-gray-primary">
@@ -49,8 +55,8 @@ const NewsDetails = () => {
         </div>
         <div className="flex flex-col ">
           <div>
-            <div className="flex items-center justify-between">
-              <span className="text-[54px] text-white font-medium">
+            <div className="flex md:items-center justify-between flex-col md:flex-row">
+              <span className="text-[34px] lg:text-[54px] text-white font-medium">
                 Recomended For You
               </span>
               <Link
@@ -65,7 +71,7 @@ const NewsDetails = () => {
                 </span>
               </Link>
             </div>
-            <div className="mt-20 grid grid-cols-3 gap-3.75">
+            <div className="mt-15 lg:mt-20 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.75">
               {NewsData.slice(0, 3).map((link, i) => (
                 <NewsCard key={i} imgSrc={link} />
               ))}

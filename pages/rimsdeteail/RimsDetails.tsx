@@ -10,16 +10,16 @@ import { RimsData } from "@/data/rims/RimsData";
 
 const RimsDetails = () => {
   return (
-    <div className="px-10 pt-37.5 pb-18.75 flex justify-center">
+    <div className="pt-25 lg:pt-37.5 pb-12.5 lg:pb-18.75 flex justify-center">
       <div className="max-w-[1830px] w-full">
-        <div className="grid grid-cols-2">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 lg:gap-3.75 px-5 md:px-6.25 lg:px-10">
           <div>
             <div className="flex flex-col justify-center h-full gap-2.5">
               <Link href="" className="flex gap-1.25 text-gray-primary">
                 <ChevronLeft />
                 <span>Back to Rims</span>
               </Link>
-              <span className="text-[68px] font-medium text-white max-w-140 flex leading-[78.2px]">
+              <span className="text-[46px] md:text-54px lg:text-[68px] font-medium text-white max-w-140 flex leading-[52.9px] md:leading-none lg:leading-[78.2px]">
                 Rent Porsche 911 GT3 RS in LA
               </span>
               <p className="text-[18px] text-gray-primary max-w-119.5">
@@ -38,17 +38,19 @@ const RimsDetails = () => {
               </Button>
             </div>
           </div>
-          <Image
-            src="/rims/rim6.avif"
-            width={920}
-            height={600}
-            className="object-cover h-150 rounded-[30px]"
-            alt="Car"
-          />
+          <div className="aspect-920/600">
+            <Image
+              src="/rims/rim6.avif"
+              width={920}
+              height={600}
+              className="object-cover aspect-920/600 rounded-[30px]"
+              alt="Car"
+            />
+          </div>
         </div>
-        <div className="grid grid-cols-2 mt-37.5 mb-18.75">
+        <div className="grid grid-cols-1 lg:grid-cols-2 mt-25 lg:mt-37.5 mb-12.5 lg:mb-18.75 gap-10 lg:gap-3.75 px-5 md:px-6.25 lg:px-10">
           <div>
-            <span className="text-[54px] text-white font-medium">
+            <span className="text-[34px] lg:text-[54px] text-white font-medium">
               Characteristics
             </span>
           </div>
@@ -98,11 +100,11 @@ const RimsDetails = () => {
         <div>
           <Steps />
         </div>
-        <div className="py-18.75 flex flex-col gap-20">
+        <div className="py-12.5 lg:py-18.75 flex flex-col gap-10 lg:gap-20 px-5 md:px-6.25 lg:px-10">
           <div className="flex items-center justify-between">
-            <span className="text-[54px] text-white font-medium">
+            <p className="text-[34px] lg:text-[54px] flex text-white font-medium">
               Explore More Rims
-            </span>
+            </p>
             <Button className="bg-navbar-text-dark h-12.25 w-fit mt-5 rounded-[99px] px-5 relative text-[14px] group overflow-hidden hover:bg-navbar-text-dark cursor-pointer text-white">
               <span className="group-hover:-translate-y-12.5 duration-300">
                 Browse Rims
@@ -112,7 +114,7 @@ const RimsDetails = () => {
               </span>
             </Button>
           </div>
-          <div className="grid grid-cols-2 gap-x-3.75 gap-y-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-3.75 gap-y-5">
             {RimsData.slice(0, 4).map((link, i) => (
               <RimCard
                 imgSrc={link}

@@ -20,7 +20,7 @@ const Rims = () => {
   return (
     <div className="px-5 md:px-6.25 lg:px-10 pb-12.5 md:pb-18.75 pt-25 lg:pt-37.5 flex justify-center">
       <div className="max-w-[1830px] w-full">
-        <div className="flex justify-center flex-col items-center gap-10">
+        <div className="flex justify-center flex-col items-center gap-10 lg:gap-20">
           <span className="text-white text-[54px] md:text-[64px] lg:text-[68px] font-medium">Rims</span>
           <div>
             <div className="flex items-center flex-wrap gap-3.75 lg:gap-5 justify-center">

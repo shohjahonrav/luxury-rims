@@ -8,12 +8,12 @@ const MainNews = () => {
   const [showedImage, setShowedImage] = useState<number>(6)
   console.log(showedImage)
   return (
-    <div className="px-10 pb-18.75 pt-37.5 flex justify-center">
-      <div className="max-w-[1830px]">
+    <div className="px-5 md:px-6.25 lg:px-10 pb-12.5 lg:pb-18.75 pt-25 lg:pt-37.5 flex justify-center">
+      <div className="max-w-[1830px] w-full">
         <div className="flex justify-center flex-col items-center gap-10">
-          <span className="text-white text-[68px] font-medium">News</span>
+          <span className="text-white text-[54px] lg:text-[68px] font-medium">News</span>
         </div>
-        <div className="grid grid-cols-3 gap-3.75 mt-20">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-3.75 mt-10 lg:mt-20">
           {NewsData.slice(0, showedImage).map((link, i) => (
             <NewsCard key={i} imgSrc={link} />
           ))}

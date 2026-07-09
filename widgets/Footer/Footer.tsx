@@ -22,7 +22,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-between flex-wrap gap-y-7">
+        <div className="flex justify-between flex-wrap gap-7">
           <div className="flex flex-col gap-6.25">
             <div className="flex flex-col gap-2.5 ">
               <span className="text-gray-primary text-[14px]">
