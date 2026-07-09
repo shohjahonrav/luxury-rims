@@ -115,8 +115,6 @@ const RimsDetails = () => {
           <div className="grid grid-cols-2 gap-x-3.75 gap-y-5">
             {RimsData.slice(0, 4).map((link, i) => (
               <RimCard
-                imgWidth={902}
-                imgHeight={597}
                 imgSrc={link}
                 key={i}
                 imgSizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 45vw"
