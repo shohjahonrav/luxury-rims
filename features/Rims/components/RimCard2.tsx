@@ -2,7 +2,7 @@ import { ChevronRight } from "lucide-react";
 import Image from "next/image";
 import Link from "next/link";
 
-export const RimCard = ({
+export const RimCardSecondary = ({
   imgSrc,
   imgSizes,
 }: {
@@ -11,7 +11,7 @@ export const RimCard = ({
   imgSizes: string;
 }) => {
   return (
-    <div className="flex flex-col aspect-902/680">
+    <div className="flex flex-col aspect-598/469">
       <Link
         className="relative overflow-hidden h-full rounded-[30px]"
         href="/rims/1"

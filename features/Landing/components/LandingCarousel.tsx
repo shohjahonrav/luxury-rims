@@ -68,7 +68,7 @@ export function TestimonialCarousel() {
   }, [api])
 
   return (
-    <div className="w-full mt-20 text-white">
+    <div className="w-full mt-10 md:mt-20 text-white">
       <div className="mx-auto max-w-[1830px]">
         <Carousel 
           setApi={setApi} 
@@ -89,7 +89,7 @@ export function TestimonialCarousel() {
                           <Star key={i} className="h-4 w-4 fill-current stroke-none" />
                         ))}
                       </div>
-                      <p className="text-neutral-400 text-[16px] leading-relaxed mb-6 font-light">
+                      <p className="text-neutral-400 md:text-[16px] leading-relaxed mb-6 font-light">
                         {testimonial.content}
                       </p>
                     </div>

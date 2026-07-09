@@ -3,16 +3,15 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="px-10 py-18.75 flex justify-center">
-      <div className="max-w-[1830px] w-full flex flex-col gap-20">
-        <span className="text-[54px] text-white flex justify-center">
+    <div className="px-6.25 md:px-10 py-12.5 md:py-18.75 flex justify-center">
+      <div className="max-w-[1830px] w-full flex flex-col gap-10 md:gap-20">
+        <span className="text-[34px] md:text-[54px] text-white flex md:justify-center">
           Premium service, zero hassle
         </span>
-        <div className="grid grid-cols-2 gap-3.75">
-          <div className="relative">
+        <div className="grid lg:grid-cols-2 gap-3.75">
+          <div className="relative aspect-902/539">
             <Image
-              width={902}
-              height={539}
+              fill
               src="/images/service1.avif"
               className="rounded-[30px] object-cover h-134.75"
               alt="Service 1"
@@ -27,10 +26,9 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative aspect-902/539">
             <Image
-              width={902}
-              height={539}
+              fill
               src="/images/service2.avif"
               className="rounded-[30px] object-cover h-134.75"
               alt="Service 1"
@@ -45,10 +43,9 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative aspect-902/539">
             <Image
-              width={902}
-              height={539}
+              fill
               src="/images/service3.avif"
               className="rounded-[30px] object-cover h-134.75"
               alt="Service 1"
@@ -63,10 +60,9 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div className="relative">
+          <div className="relative aspect-902/539">
             <Image
-              width={902}
-              height={539}
+              fill
               src="/images/service4.avif"
               className="rounded-[30px] object-cover h-134.75"
               alt="Service 1"

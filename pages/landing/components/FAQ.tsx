@@ -4,10 +4,10 @@ import React from 'react'
 
 const FAQ = () => {
   return (
-    <div className='px-10 py-18.75 flex justify-center'>
-      <div className='max-w-[1830px] w-full grid grid-cols-2 gap-3.75'>
+    <div className='px-6.25 md:px-10 py-12.5 md:py-18.75 flex justify-center'>
+      <div className='max-w-[1830px] w-full grid md:grid-cols-2 gap-5 md:gap-3.75'>
         <div>
-          <span className='text-[54px] text-white font-medium'>Frequently Asked Questions</span>
+          <span className='text-[34px] md:text-[54px] text-white font-medium'>Frequently Asked Questions</span>
         </div>
         <div>
            <Accordion

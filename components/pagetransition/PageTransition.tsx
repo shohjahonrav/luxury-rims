@@ -1,10 +1,9 @@
 "use client";
 
-import { motion, useAnimationControls } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { useEffect, useRef } from "react";
 
-const DURATION = 0.7;
+const DURATION = 0.5;
 const EASE = [0.76, 0, 0.24, 1] as const;
 
 export default function PageTransition({
@@ -13,45 +12,17 @@ export default function PageTransition({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  const controls = useAnimationControls();
-  const isFirstRender = useRef(true);
-
-  useEffect(() => {
-    if (isFirstRender.current) {
-      isFirstRender.current = false;
-      return;
-    }
-
-    const sequence = async (): Promise<void> => {
-      await controls.start({
-        y: "0%",
-        transition: { duration: DURATION, ease: EASE },
-      });
-      await controls.start({
-        y: "-100%",
-        transition: { duration: DURATION, ease: EASE },
-      });
-      controls.set({ y: "100%" });
-    };
-
-    sequence();
-  }, [pathname, controls]);
 
   return (
-    <>
-      <motion.div
-        initial={{ y: "100%" }}
-        animate={controls}
-        className="fixed inset-0 z-40 bg-black-primary pointer-events-none"
-      />
+    <AnimatePresence mode="wait" initial={false}>
       <motion.div
         key={pathname}
-        initial={{ opacity: 0, y: 12 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.5, delay: DURATION * 0.55 }}
+        initial={{ opacity: 0, scale: 0.98 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: DURATION, ease: EASE }}
       >
         {children}
       </motion.div>
-    </>
+    </AnimatePresence>
   );
 }

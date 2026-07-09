@@ -7,14 +7,14 @@ import { LuCalendarClock } from "react-icons/lu";
 
 const Benefits = () => {
   return (
-    <div className="px-10 w-full py-18.75 flex justify-center">
-      <div className="max-w-[1830px] w-full bg-benefits rounded-[30px] grid grid-cols-2 p-15">
+    <div className="px-6.25 md:px-10 w-full py-12.5 md:py-18.75 flex justify-center">
+      <div className="max-w-[1830px] w-full bg-benefits rounded-[30px] grid md:grid-cols-2 gap-5 p-7.5 md:p-15">
         <div className="flex flex-col gap-5 justify-center">
           <div>
-            <span className="text-white flex max-w-120 leading-17.5 text-[54px] font-medium">
+            <span className="text-white flex max-w-120 md:leading-17.5 text-[34px] md:text-[54px] font-medium">
               Premium Service Benefits
             </span>
-            <p className="text-[18px] text-gray-primary max-w-85">
+            <p className="text-[16px] md:text-[18px] text-gray-primary max-w-85">
               We’re here for you — ready to help find the perfect car that matches
               your needs.
             </p>
@@ -34,7 +34,7 @@ const Benefits = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-2 gap-3.75">
+        <div className="grid md:grid-cols-2 gap-3.75">
           <div className="bg-navbar-text-dark flex flex-col justify-between h-[171.5px] p-6.25 rounded-[20px]">
             <div className="bg-small-card h-11 w-11 rounded-[10px] flex items-center justify-center">
               <GiCarWheel className="text-white w-5! h-5!" />

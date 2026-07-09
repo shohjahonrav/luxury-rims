@@ -3,11 +3,10 @@ import Link from "next/link";
 
 export const NewsCard = ({ imgSrc }: { imgSrc: string }) => {
   return (
-    <div className="relative overflow-hidden rounded-[30px]">
+    <div className="relative overflow-hidden aspect-596/656 rounded-[30px]">
       <Image
         src={imgSrc}
-        width={596}
-        height={656}
+        fill
         sizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 40vw"
         alt="News1"
         className="object-cover h-164 rounded-[30px]"

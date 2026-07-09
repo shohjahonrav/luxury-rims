@@ -13,17 +13,17 @@ import {
   PaginationLink,
 } from "@/components/ui/pagination";
 
-import { RimCard } from "@/features/Rims/components/RimCard";
 import { RimsData } from "@/data/rims/RimsData";
+import { RimCardSecondary } from "@/features/Rims/components/RimCard2";
 
 const Rims = () => {
   return (
-    <div className="px-10 pb-18.75 pt-37.5 flex justify-center">
-      <div className="max-w-[1830px]">
+    <div className="px-5 md:px-6.25 lg:px-10 pb-12.5 md:pb-18.75 pt-25 lg:pt-37.5 flex justify-center">
+      <div className="max-w-[1830px] w-full">
         <div className="flex justify-center flex-col items-center gap-10">
-          <span className="text-white text-[68px] font-medium">Rims</span>
+          <span className="text-white text-[54px] md:text-[64px] lg:text-[68px] font-medium">Rims</span>
           <div>
-            <div className="flex items-center gap-5">
+            <div className="flex items-center flex-wrap gap-3.75 lg:gap-5 justify-center">
               <Select>
                 <SelectTrigger className="bg-navbar-text-dark h-[51.5px]! px-5! gap-4 border-none text-white! [&_svg]:text-white rounded-[99px]">
                   <SelectValue placeholder="Brand" />
@@ -99,11 +99,9 @@ const Rims = () => {
             </div>
           </div>
         </div>
-        <div className="grid grid-cols-3 gap-x-3.75 gap-y-5 mt-20">
-          {RimsData.map((link, i) => (
-            <RimCard
-              imgHeight={697}
-              imgWidth={600}
+        <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3.75 gap-y-5 mt-10 lg:mt-20">
+          {RimsData.map((link, i) => (  
+            <RimCardSecondary
               imgSrc={link}
               key={i}
               imgSizes="(max-width: 640px) 100vw, (max-width: 1024px) 60vw, 45vw"

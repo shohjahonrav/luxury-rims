@@ -2,12 +2,11 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { PhoneIcon } from "lucide-react";
 import Link from "next/link";
-import React from "react";
 import { PiInstagramLogoLight, PiTelegramLogoLight } from "react-icons/pi";
 
 const Footer = () => {
   return (
-    <div className="p-10 flex justify-center">
+    <div className="p-5 md:p-6.25 lg:p-10 flex justify-center">
       <div className="max-w-[1830px] flex flex-col gap-5 w-full p-7.5 bg-benefits rounded-[30px]">
         <div className="flex items-center justify-between">
           <span className="text-white">Luxury Rims</span>
@@ -23,7 +22,7 @@ const Footer = () => {
             </Link>
           </div>
         </div>
-        <div className="flex justify-between">
+        <div className="flex justify-between flex-wrap gap-y-7">
           <div className="flex flex-col gap-6.25">
             <div className="flex flex-col gap-2.5 ">
               <span className="text-gray-primary text-[14px]">
@@ -119,10 +118,10 @@ const Footer = () => {
             </form>
             <p className="text-[13px] text-gray-primary">
               By subscribing to our newsletter, you agree to receive emails from
-              us and accept our 
+              us and accept our
               <Link href="" className="text-white ml-1">
                 Privacy Policy.
-              </Link> 
+              </Link>
             </p>
           </div>
         </div>

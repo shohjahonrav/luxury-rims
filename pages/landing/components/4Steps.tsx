@@ -3,17 +3,17 @@ import React from "react";
 
 const Steps = () => {
   return (
-    <div className="px-10 py-18.75 w-full flex justify-center">
-      <div className="max-w-[1830px] w-full grid grid-cols-2 gap-3.75">
+    <div className="px-6.25 md:px-10 py-12.5 md:py-18.75 w-full flex justify-center">
+      <div className="max-w-[1830px] w-full grid lg:grid-cols-2 gap-3.75">
         <Image
           src="/images/rims.avif"
           width={902}
           height={551}
-          className="object-cover rounded-[30px]"
+          className="object-cover rounded-[30px] h-full"
           alt="Rims"
         />
-        <div className="grid grid-cols-2 gap-3.75">
-          <div className="bg-benefits rounded-[20px] px-5 flex items-center justify-center flex-col gap-5">
+        <div className="grid md:grid-cols-2 gap-3.75">
+          <div className="bg-benefits rounded-[20px] p-5 flex items-center justify-center flex-col gap-5">
             <div className="bg-small-card h-11 w-11 rounded-[10px] text-white text-[16px] font-medium flex items-center justify-center">
               01
             </div>
@@ -22,7 +22,7 @@ const Steps = () => {
               <p className="text-gray-primary max-w-70 text-center">Explore our curated collection of luxury rims and find the perfect match for your vehicle.</p>
             </div>
           </div>
-          <div className="bg-benefits rounded-[20px] px-5 flex items-center justify-center flex-col gap-5">
+          <div className="bg-benefits rounded-[20px] p-5 flex items-center justify-center flex-col gap-5">
             <div className="bg-small-card h-11 w-11 rounded-[10px] text-white text-[16px] font-medium flex items-center justify-center">
               02
             </div>
@@ -31,7 +31,7 @@ const Steps = () => {
               <p className="text-gray-primary max-w-70 text-center">Receive personalized recommendations on size, fitment, finish, and design.</p>
             </div>
           </div>
-          <div className="bg-benefits rounded-[20px] px-5 flex items-center justify-center flex-col gap-5">
+          <div className="bg-benefits rounded-[20px] p-5 flex items-center justify-center flex-col gap-5">
             <div className="bg-small-card h-11 w-11 rounded-[10px] text-white text-[16px] font-medium flex items-center justify-center">
               03
             </div>
@@ -40,7 +40,7 @@ const Steps = () => {
               <p className="text-gray-primary max-w-55 text-center">Select your preferred rims, accessories, and installation options.</p>
             </div>
           </div>
-          <div className="bg-benefits rounded-[20px] px-5 flex items-center justify-center flex-col gap-5">
+          <div className="bg-benefits rounded-[20px] p-5 flex items-center justify-center flex-col gap-5">
             <div className="bg-small-card h-11 w-11 rounded-[10px] text-white text-[16px] font-medium flex items-center justify-center">
               04
             </div>
