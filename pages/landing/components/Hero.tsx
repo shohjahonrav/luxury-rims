@@ -14,7 +14,7 @@ const Hero = () => {
         quality={80}
         className="object-cover"
       />
-      <div className="absolute bg-linear-to-t from-black-primary via-transparent px-6.25 md:px-10 flex justify-center items-end h-screen to-transparent  w-full">
+      <div className="absolute bg-linear-to-t from-black-primary via-transparent px-5 md:px-6.25 lg:px-10 flex justify-center items-end h-screen to-transparent  w-full">
         <div className="max-w-[1830px] pb-15 w-full flex flex-col gap-5">
           <div className="h-[41.5px] bg-navbar-text-dark px-3.75 flex items-center gap-2.25 rounded-[99px] w-fit">
             <IoDiamondOutline className="text-white w-5! h-5!" />

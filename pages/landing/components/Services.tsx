@@ -3,7 +3,7 @@ import React from "react";
 
 const Services = () => {
   return (
-    <div className="px-6.25 md:px-10 py-12.5 md:py-18.75 flex justify-center">
+    <div className="px-5 md:px-6.25 lg:px-10 py-12.5 md:py-18.75 flex justify-center">
       <div className="max-w-[1830px] w-full flex flex-col gap-10 md:gap-20">
         <span className="text-[34px] md:text-[54px] text-white flex md:justify-center">
           Premium service, zero hassle

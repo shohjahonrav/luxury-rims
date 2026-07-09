@@ -4,7 +4,7 @@ import { IoDiamondOutline } from 'react-icons/io5'
 
 const Testimonials = () => {
   return (
-    <div className='w-full px-10 py-18.75 flex justify-center'>
+    <div className='w-full px-5 md:px-6.25 lg:px-10 py-18.75 flex justify-center'>
       <div className='max-w-[1830px] w-full'>
         <div className='flex md:items-center justify-center flex-col gap-5 md:gap-7.5'>
           <div className="h-[41.5px] bg-navbar-text-dark px-3.75 flex items-center gap-2.25 rounded-[99px] w-fit">
