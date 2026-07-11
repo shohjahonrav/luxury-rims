@@ -1,7 +1,7 @@
 "use client"
 
 import * as React from "react"
-import { Star } from "lucide-react" // or your choice of star icon
+import { Star } from "lucide-react"
 import { type CarouselApi } from "@/components/ui/carousel"
 import {
   Carousel,

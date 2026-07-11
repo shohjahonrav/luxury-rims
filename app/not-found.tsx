@@ -8,14 +8,14 @@ const NotFound = () => {
   return (
     <div>
       <Navbar />
-      <div className="min-h-screen h-full px-10 w-full flex items-center justify-center">
+      <div className="min-h-screen h-full px-5 md:px-6.25 lg:px-10 w-full flex items-center justify-center">
         <div className="max-w-[1830px] w-full flex flex-col justify-center items-center">
-          <div className="text-[240px] flex">
+          <div className="text-[90px] md:text-[140px] lg:text-[240px] flex">
             <span className="text-white font-bold">4</span>
             <Image
               width={260}
               height={260}
-              className="object-contain min-w-65 animate-[spin_15s_linear_infinite]"
+              className="object-contain aspect-260/260 max-w-25 md:max-w-40 lg:min-w-65 animate-[spin_15s_linear_infinite]"
               alt="404"
               src="/notfound2.png"
             />

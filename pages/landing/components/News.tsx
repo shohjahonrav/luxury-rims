@@ -1,9 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { NewsData } from "@/data/news/NewsData";
 import { NewsCard } from "@/features/news/components/NewsCard";
-import Image from "next/image";
-import Link from "next/link";
-import React from "react";
 
 const News = () => {
   return (

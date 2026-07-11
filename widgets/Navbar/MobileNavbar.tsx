@@ -1,3 +1,4 @@
+"use client"
 import {
   Accordion,
   AccordionContent,
@@ -7,6 +8,7 @@ import {
 import { Button } from "@/components/ui/button";
 import { PhoneIcon } from "lucide-react";
 import Link from "next/link";
+import { useState } from "react";
 import { PiInstagramLogoLight, PiTelegramLogoLight } from "react-icons/pi";
 
 const NavbarItems = [
@@ -25,20 +27,32 @@ const NavbarItems = [
 ];
 
 const MobileNavbar = () => {
+  const [isOpen, setIsOpen] = useState<string>();
+
+  const CloseNavbar = () => {
+    setIsOpen("")
+  }
+  
   return (
     <Accordion
-      type="multiple"
+      type="single"
+      collapsible
+      value={isOpen}
+      onValueChange={setIsOpen}
       className="fixed top-5 left-1/2 -translate-x-1/2 bg-benefits h-fit pb-0 rounded-[30px] border border-white/5 px-5 z-10 w-[calc(100%-40px)]"
     >
       <AccordionItem value="mobilenavbar">
         <AccordionTrigger className="h-15.5 flex items-center">
-          <Link href="/" className="text-white text-[16px] no-underline">Luxury Rims</Link>
+          <Link onClick={CloseNavbar} href="/" className="text-white text-[16px] no-underline">
+            Luxury Rims
+          </Link>
         </AccordionTrigger>
         <AccordionContent className="h-full pb-5">
           <div>
             <div className="flex flex-col gap-3.75">
               {NavbarItems.map((item, i) => (
                 <Link
+                  onClick={CloseNavbar}
                   key={i}
                   href={item.link}
                   className="text-[16px] no-underline! hover:text-gray-100! text-navbar-text-primary"
