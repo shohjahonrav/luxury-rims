@@ -33,6 +33,16 @@ const ContactForm = () => {
         />
       </div>
       <div className="flex flex-col gap-2.5">
+        <label className="text-white text-[16px]" htmlFor="car">
+          Car Model
+        </label>
+        <Input
+          id="car"
+          className="px-5 rounded-[99px] text-white h-[51.5px]! bg-navbar-text-dark border-none"
+          placeholder="Your Car Model"
+        />
+      </div>
+      <div className="flex flex-col gap-2.5">
         <span className="text-white text-[16px]">Choose Your Rim</span>
         <Select>
           <SelectTrigger className="bg-navbar-text-dark w-full h-[51.5px]! px-5! gap-4 border-none text-white! [&_svg]:text-white rounded-[99px]">
