@@ -1,4 +1,3 @@
-import { Button } from "@/components/ui/button";
 import { PhoneIcon } from "lucide-react";
 import Link from "next/link";
 import { PiInstagramLogoLight, PiTelegramLogoLight } from "react-icons/pi";
@@ -35,14 +34,14 @@ const DesktopNavbar = () => {
               <PhoneIcon className="h-5! w-5! text-navbar-text-primary" />
             </Link>
           </div>
-          <Button className="bg-white h-12.25 rounded-[99px] px-5 relative text-[14px] group overflow-hidden hover:bg-white cursor-pointer text-navbar-text-dark">
+          <Link href="/rims" className="bg-white h-12.25 flex items-center justify-center font-medium rounded-[99px] px-5 relative text-[14px] group overflow-hidden hover:bg-white cursor-pointer text-navbar-text-dark">
             <span className="group-hover:-translate-y-12.5 duration-300">
               Buy Now
             </span>
             <span className="-translate-y-1/2 absolute top-[calc(50%+50px)] group-hover:top-1/2 duration-300">
               Buy Now
             </span>
-          </Button>
+          </Link>
         </div>
       </div>
     </div>

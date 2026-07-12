@@ -11,7 +11,6 @@ const Hero = () => {
         sizes="100vw"
         priority
         alt="Diska Tuning"
-        quality={80}
         className="object-cover"
       />
       <div className="absolute bg-linear-to-t from-black-primary via-transparent px-5 md:px-6.25 lg:px-10 flex justify-center items-end h-screen to-transparent  w-full">

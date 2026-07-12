@@ -21,7 +21,9 @@ const Rims = () => {
     <div className="px-5 md:px-6.25 lg:px-10 pb-12.5 md:pb-18.75 pt-25 lg:pt-37.5 flex justify-center">
       <div className="max-w-[1830px] w-full">
         <div className="flex justify-center flex-col items-center gap-10 lg:gap-20">
-          <span className="text-white text-[54px] md:text-[64px] lg:text-[68px] font-medium">Rims</span>
+          <span className="text-white text-[54px] md:text-[64px] lg:text-[68px] font-medium">
+            Rims
+          </span>
           <div>
             <div className="flex items-center flex-wrap gap-3.75 lg:gap-5 justify-center">
               <Select>
@@ -100,7 +102,7 @@ const Rims = () => {
           </div>
         </div>
         <div className="grid w-full grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-3.75 gap-y-5 mt-10 lg:mt-20">
-          {RimsData.map((link, i) => (  
+          {RimsData.map((link, i) => (
             <RimCardSecondary
               imgSrc={link}
               key={i}
