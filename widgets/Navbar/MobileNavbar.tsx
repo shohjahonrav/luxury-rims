@@ -39,7 +39,7 @@ const MobileNavbar = () => {
       collapsible
       value={isOpen}
       onValueChange={setIsOpen}
-      className="fixed top-5 left-1/2 -translate-x-1/2 bg-benefits h-fit pb-0 rounded-[30px] border border-white/5 px-5 z-10 w-[calc(100%-40px)]"
+      className="fixed top-5 left-1/2 lg:hidden -translate-x-1/2 bg-benefits h-fit pb-0 rounded-[30px] border border-white/5 px-5 z-10 w-[calc(100%-40px)]"
     >
       <AccordionItem value="mobilenavbar">
         <AccordionTrigger className="h-15.5 flex items-center">

@@ -4,7 +4,7 @@ import { PiInstagramLogoLight, PiTelegramLogoLight } from "react-icons/pi";
 
 const DesktopNavbar = () => {
   return (
-    <div className="h-21 w-full bg-linear-to-b flex items-center justify-center px-10 from-black-primary  via-transparent to-transparent fixed top-0 left-0 z-10">
+    <div className="h-21 w-full bg-linear-to-b hidden lg:flex items-center justify-center px-10 from-black-primary  via-transparent to-transparent fixed top-0 left-0 z-10">
       <div className="max-w-[1830px] relative w-full flex items-center justify-between">
         <Link href="/" className="text-white">
           Luxury Rims

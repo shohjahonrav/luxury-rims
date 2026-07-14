@@ -28,7 +28,7 @@ const NewsDetails = () => {
           </span>
           <span className="text-[16px] text-gray-primary">July 20, 2025</span>
           <Image
-            src="/images/news1.avif"
+            src="/news/news1.avif"
             width={650}
             height={400}
             alt="News 1"
