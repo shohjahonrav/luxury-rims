@@ -29,7 +29,7 @@ const NewsDetails = () => {
             width={650}
             height={400}
             alt="News 1"
-            className=" object-cover aspect-650/400 rounded-[30px]"
+            className=" object-cover w-full aspect-650/400 rounded-[30px]"
           />
           <div className="flex flex-col gap-3.75 mt-6.25">
             <p className="text-[18px] text-gray-primary">
