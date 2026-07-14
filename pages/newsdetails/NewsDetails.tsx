@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { Button } from "@/components/ui/button";
 import { NewsData } from "@/data/news/NewsData";
 import { NewsCard } from "@/features/news/components/NewsCard";
@@ -8,15 +8,18 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const NewsDetails = () => {
-  const navigate = useRouter()
+  const navigate = useRouter();
   const goBack = () => {
-    navigate.back()
-  }
+    navigate.back();
+  };
   return (
     <div className="max-10 px-5 pt-25 lg:pt-37.5 pb-12.5 lg:pb-18.75 flex justify-center">
       <div className="max-w-[1830px] w-full flex flex-col gap-25 lg:gap-37.5">
         <div className="max-w-162.5 mx-auto w-full flex flex-col gap-3.75">
-          <Button onClick={() => goBack()} className="flex gap-1.25 bg-transparent w-fit px-0 hover:bg-transparent text-gray-primary">
+          <Button
+            onClick={() => goBack()}
+            className="flex gap-1.25 bg-transparent w-fit px-0 hover:bg-transparent text-gray-primary"
+          >
             <ChevronLeft />
             <span>Back to Rims</span>
           </Button>
@@ -29,6 +32,7 @@ const NewsDetails = () => {
             width={650}
             height={400}
             alt="News 1"
+            sizes="(max-width: 640px) 100vw, (max-width: 1024px) 100vw, 40vw"
             className=" object-cover w-full aspect-650/400 rounded-[30px]"
           />
           <div className="flex flex-col gap-3.75 mt-6.25">
